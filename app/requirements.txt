@@ -1,0 +1,8 @@
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+pydantic==1.10.11
+python-dotenv==1.0.1
+httpx==0.24.1
+typing-extensions==4.7.1
+# Optional—if you have a package named `langgraph`, install it; otherwise the internal engine is used
+# langgraph==<version>

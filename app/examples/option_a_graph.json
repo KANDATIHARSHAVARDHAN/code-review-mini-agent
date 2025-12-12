@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id": "extract", "tool": "extract_functions"},
+    {"id": "complexity", "tool": "cyclomatic_complexity"},
+    {"id": "issues", "tool": "detect_basic_issues"},
+    {"id": "suggest", "tool": "suggest_improvements"},
+    {"id": "score", "tool": "compute_quality"}
+  ],
+  "edges": [
+    {"from": "extract", "to": "complexity", "cond": null},
+    {"from": "complexity", "to": "issues", "cond": null},
+    {"from": "issues", "to": "suggest", "cond": null},
+    {"from": "suggest", "to": "score", "cond": null},
+    {"from": "score", "to": "extract", "cond": "quality_below_threshold"}
+  ],
+  "start": "extract"
+}
